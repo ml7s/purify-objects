@@ -1,6 +1,6 @@
 {
   "name": "purify-objects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A powerful TypeScript library for cleaning objects by removing empty values, applying custom filters, and handling nested objects",
   "repository": {
     "type": "git",

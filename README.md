@@ -51,7 +51,7 @@ The `--safe` flag ensures:
 ### Basic Cleaning
 
 ```typescript
-import cleanObject from 'purify-objects';
+import { cleanObject } from 'purify-objects';
 
 const dirtyObject = {
   name: "Turki",

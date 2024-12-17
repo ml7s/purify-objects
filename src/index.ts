@@ -57,7 +57,7 @@ function processNestedObject<T extends AnyObject>(
   return workingCopy;
 }
 
-export default function cleanObject<T extends AnyObject>(
+function cleanObject<T extends AnyObject>(
   obj: T,
   customCleaner?: CleanerOptions['customCleaner'],
   keepFields: string[] = [],
@@ -65,4 +65,7 @@ export default function cleanObject<T extends AnyObject>(
 ): T {
   const config = { ...INITIAL_OPTIONS, ...options } as Required<CleanerOptions>;
   return processNestedObject(obj, customCleaner, keepFields, config);
-} 
+}
+
+export { cleanObject };
+export default cleanObject; 

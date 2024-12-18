@@ -14,7 +14,7 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "purify-objects": "./dist/cli.js"
+    "purify-objects": "./dist/cli.cjs.js"
   },
   "scripts": {
     "build": "vite build",

@@ -5,12 +5,15 @@ import { resolve } from 'path';
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
+      entry: {
+        index: resolve(__dirname, 'src/index.ts'),
+        cli: resolve(__dirname, 'src/cli.ts')
+      },
       formats: ['es', 'cjs'],
-      fileName: (format) => `index.${format}.js`
+      fileName: (format, entryName) => `${entryName}.${format}.js`
     },
     rollupOptions: {
-      external: ['chalk']
+      external: ['chalk', 'fs', 'path']
     }
   },
   plugins: [dts()]

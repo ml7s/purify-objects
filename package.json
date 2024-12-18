@@ -1,6 +1,6 @@
 {
   "name": "purify-objects",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "A powerful TypeScript library for cleaning objects by removing empty values, applying custom filters, and handling nested objects",
   "repository": {
     "type": "git",
@@ -10,11 +10,10 @@
     "url": "https://github.com/ml7s/purify-objects/issues"
   },
   "homepage": "https://github.com/ml7s/purify-objects#readme",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "purify-objects": "./dist/cli.cjs.js"
+    "purify-objects": "./dist/cli.js"
   },
   "scripts": {
     "build": "vite build",

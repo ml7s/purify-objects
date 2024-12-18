@@ -9,15 +9,18 @@ export default defineConfig({
         index: resolve(__dirname, 'src/index.ts'),
         cli: resolve(__dirname, 'src/cli.ts')
       },
-      formats: ['es', 'cjs'],
-      fileName: (format, entryName) => `${entryName}.${format}.js`
+      formats: ['cjs'],
+      fileName: (format, entryName) => `${entryName}.js`
     },
     rollupOptions: {
       external: ['chalk', 'fs', 'path'],
       output: {
-        format: 'cjs'
+        format: 'cjs',
+        exports: 'auto'
       }
-    }
+    },
+    target: 'node14',
+    minify: false
   },
   plugins: [dts()]
 }); 

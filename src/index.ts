@@ -1,4 +1,4 @@
-import { isNil, isEmpty, isObject, cloneDeep } from 'lodash';
+import { isNil, isObject, cloneDeep } from './utils';
 import { CleanerOptions, AnyObject } from './types';
 
 const INITIAL_OPTIONS: Required<Omit<CleanerOptions, 'customCleaner'>> & Pick<CleanerOptions, 'customCleaner'> = {

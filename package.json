@@ -10,13 +10,14 @@
     "url": "https://github.com/ml7s/purify-objects/issues"
   },
   "homepage": "https://github.com/ml7s/purify-objects#readme",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "bin": {
     "purify-objects": "./dist/cli.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "vite build",
     "prepare": "npm run build"
   },
   "keywords": [
@@ -37,13 +38,17 @@
   "author": "Turki Al-Shammari",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "devDependencies": {
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.7.0",
+    "@types/node": "^20.0.0",
     "@types/lodash": "^4.17.13",
     "ts-node": "^10.9.2"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "chalk": "^5.3.0"
   }
 }

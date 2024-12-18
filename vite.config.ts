@@ -13,7 +13,10 @@ export default defineConfig({
       fileName: (format, entryName) => `${entryName}.${format}.js`
     },
     rollupOptions: {
-      external: ['chalk', 'fs', 'path']
+      external: ['chalk', 'fs', 'path'],
+      output: {
+        format: 'cjs'
+      }
     }
   },
   plugins: [dts()]
